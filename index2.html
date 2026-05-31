@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera de Cine - Práctica de Clase</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #141414;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #e50914;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            color: #aaa;
+            font-size: 1rem;
+        }
+
+        .cartelera-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .pelicula-card {
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pelicula-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(229, 9, 20, 0.4);
+        }
+
+        .imagen-contenedor {
+            width: 100%;
+            height: 450px; 
+            overflow: hidden;
+            background-color: #2b2b2b; 
+            position: relative;
+        }
+
+        .imagen-contenedor img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+
+        .pelicula-card:hover .imagen-contenedor img {
+            transform: scale(1.05);
+        }
+
+        .pelicula-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .pelicula-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: #fff;
+            border-left: 4px solid #e50914;
+            padding-left: 10px;
+        }
+
+        .pelicula-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #e50914;
+            letter-spacing: 1px;
+        }
+
+        .pelicula-info p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #d1d1d1;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #777;
+            font-size: 0.85rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cartelera de Cine</h1>
+        <p>Práctica de inserción de imágenes y diseño web</p>
+    </header>
+
+    <main class="cartelera-container">
+
+        <article class="pelicula-card">
+            <div class="imagen-contenedor">
+                <img src="anais.jpg" alt="Póster oficial de Los amores de Anaïs">
+            </div>
+            <div class="pelicula-info">
+                <h2>Los amores de Anaïs</h2>
+                <h3>Sinopsis</h3>
+                <p>Anaïs tiene 30 años y es inestable en lo económico y en el amor. Un día conoce a Daniel y este siente un profundo flechazo por ella. Pero Daniel vive con Emilie que rápidamente también se siente cautivada por Anaïs. Esta es la historia de una joven parisina inquieta y un tanto alocada con un profundo deseo de amar.</p>
+            </div>
+        </article>
+
+        <article class="pelicula-card">
+            <div class="imagen-contenedor">
+                <img src="mancha.jpg" alt="Póster oficial de La mancha negra">
+            </div>
+            <div class="pelicula-info">
+                <h2>La mancha negra</h2>
+                <h3>Sinopsis</h3>
+                <p>Matilde Cisneros es una anciana que vive junto a sus tres hijas en un pequeño pueblo del interior de Andalucía a principios de los años 70. Tras la muerte de Matilde, sus hijas se disponen a preparar su velatorio, a pesar de que todo el pueblo les da la espalda. La herencia de Matilde, compuesta de propiedades y terrenos, y la llegada de un inesperado hermano mayor, convierte la codicia y el propio interés en el eje de la historia.</p>
+            </div>
+        </article>
+
+        <article class="pelicula-card">
+            <div class="imagen-contenedor">
+                <img src="medium.png" alt="Póster oficial de The Medium">
+            </div>
+            <div class="pelicula-info">
+                <h2>The medium</h2>
+                <h3>Sinopsis</h3>
+                <p>En una aldea rural en la región de Isan, en el noreste de Tailandia, sus habitantes creen que todas las cosas y todos los lugares poseen un espíritu: las casas, los bosques, las montañas, los árboles e incluso los campos de arroz. Un equipo documental se desplaza hasta allí para hacer un seguimiento de la historia de Nim, una chamán que ha creído ver extraños signos en su sobrina Mink que demostrarían que está a punto de ser poseída por la diosa Bayan y heredar su chamanismo como ha sucedido a lo largo de generaciones en su familia. Pero mientras tratan de capturar el misterioso fenómeno, el comportamiento de la joven se vuelve cada vez más extremo y Nim comienza a sospechar que lo que la posee no es la diosa que todos esperaban que fuera.</p>
+            </div>
+        </article>
+
+        <article class="pelicula-card">
+            <div class="imagen-contenedor">
+                <img src="ainbo.jpg" alt="Póster oficial de Ainbo">
+            </div>
+            <div class="pelicula-info">
+                <h2>Ainbo</h2>
+                <h3>Sinopsis</h3>
+                <p>La pequeña Ainbo vive en lo más profundo de la selva amazónica. Tras perder a su madre y pelearse con los adultos de su aldea, esta joven arquera emprende un viaje para salvar a su pueblo del poder destructor del hombre blanco. En su viaje épico la acompañan sus guías espirituales: Dillo, un armadillo pequeño y divertido, y Vaca, un tapir de gran tamaño. Todos ellos se embarcan en una aventura para salvar su hogar, situado en ese espectacular entorno natural.</p>
+            </div>
+        </article>
+
+        <article class="pelicula-card">
+            <div class="imagen-contenedor">
+                <img src="casate.jpg" alt="Póster oficial de Cásate conmigo">
+            </div>
+            <div class="pelicula-info">
+                <h2>Cásate conmigo</h2>
+                <h3>Sinopsis</h3>
+                <p>La superestrella musical Kat Valdez (Jennifer Lopez) y el profesor de matemáticas Charlie Gilbert (Owen Wilson), dos perfectos desconocidos deciden, primero, casarse y luego, poco a poco, conocerse. En un mundo dominado por los clics, las visitas y el número de seguidores, este insospechado romance entre dos personas radicalmente distintas en busca de emociones reales contrasta el amor sobre la fama, el matrimonio y las redes sociales.</p>
+            </div>
+        </article>
+        <article class="pelicula-card">
+            <div class="imagen-contenedor">
+                <img src="Tailor.webp" alt="Póster oficial de Tailor (El sastre)">
+            </div>
+            <div class="pelicula-info">
+                <h2>Tailor (El sastre)</h2>
+                <h3>Sinopsis</h3>
+                <p>Nikos vive en el ático de la sastrería familiar. Cuando el banco amenaza con embargar la sastrería y su padre cae enfermo, Nikos entra en acción: con una maravillosa, aunque extraña sastrería sobre ruedas, consigue reinventarse a sí mismo aportando estilo y confianza a las mujeres de Atenas con preciosos vestidos.</p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Práctica Escolar: Inserción de Imágenes en HTML</p>
+    </footer>
+
+</body>
+</html>
